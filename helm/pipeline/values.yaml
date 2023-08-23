@@ -1,0 +1,23 @@
+app:
+  name: ordersback1-app-backend
+  namespace: devhub
+  cluster: .apps.cluster-8mf2b.sandbox3125.opentlc.com
+
+git:
+  branch: main
+  repo: https://github.com/devhub-mad/ordersback1-app-backend
+  org: devhub-mad
+  name: ordersback1-app-backend
+
+image:
+  host: image-registry.openshift-image-registry.svc:5000/devhub
+  name: ordersback1-app-backend
+  tag: latest
+
+
+pipelineStorage:
+  pvcSize: 2Gi
+  storageClassName: ""
+
+targetEnvironment: dev
+env: []
